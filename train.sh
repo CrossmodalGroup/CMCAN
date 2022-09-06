@@ -1,0 +1,2 @@
+#!/bin/bash
+python train.py --data_path ./DATA/ --data_name f30k_precomp --vocab_path ./DATA/vocab/ --model_name ./models/ --logger_name ./logs/ --num_epochs 60 --lr_update 40 --batch_size 128 --self_layers 3
