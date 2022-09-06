@@ -478,8 +478,8 @@ class EncoderSimilarity(nn.Module):
         self.sim_eval_w = nn.Linear(2*sim_dim, 1)
         self.sigmoid = nn.Sigmoid()
 
-        self.SGR_module_t = nn.ModuleList([SelfReasoning(sim_dim) for i in range(self_layers)])
-        self.SGR_module_v = nn.ModuleList([SelfReasoning(sim_dim) for i in range(self_layers)])
+        self.module_t = nn.ModuleList([SelfReasoning(sim_dim) for i in range(self_layers)])
+        self.module_v = nn.ModuleList([SelfReasoning(sim_dim) for i in range(self_layers)])
 
         self.init_weights()
 
@@ -494,11 +494,11 @@ class EncoderSimilarity(nn.Module):
             sim_emb_v = sim_emb_v_list[i]
             # compute the final similarity vector
             
-            for module in self.SGR_module_t:
+            for module in self.module_t:
                 sim_emb_t = module(sim_emb_t)
             sim_vec_t = sim_emb_t[:, 0, :]
             
-            for module in self.SGR_module_v:
+            for module in self.module_v:
                 sim_emb_v = module(sim_emb_v)
             sim_vec_v = sim_emb_v[:, 0, :]
 
