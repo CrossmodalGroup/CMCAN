@@ -3,7 +3,7 @@
 Implementation of our AAAI2022 paper, Show Your Faith: Cross-Modal Confidence-Aware Network for Image-Text Matching.
 
 ## Data
-vocab is is available here: [vocab](https://drive.google.com/drive/folders/1Xxl2452lWrjWuXtFQgzItKRfhUdZRKFt?usp=drive_link).
+vocab is available here: [vocab](https://drive.google.com/drive/folders/1Xxl2452lWrjWuXtFQgzItKRfhUdZRKFt?usp=drive_link).
 
 ims_bbx.npy, ims_size.npy, precaps_stan.txt for Flickr30K: [f30k_precomp](https://drive.google.com/drive/folders/1kuLiCLb5luJdorJuKMVhT7BMVhJSybT-?usp=drive_link).
 
